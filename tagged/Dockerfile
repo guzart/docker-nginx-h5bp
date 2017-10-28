@@ -1,4 +1,4 @@
-FROM 'nginx:1.12.2-alpine'
+FROM 'nginx:1.13.6-alpine'
 
 RUN apk --update  add --no-cache --virtual .build-deps git \
     && git clone https://github.com/h5bp/server-configs-nginx.git nginx-configs \
