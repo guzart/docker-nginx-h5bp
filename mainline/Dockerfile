@@ -12,7 +12,7 @@ RUN apk --update  add --no-cache --virtual .build-deps git \
     && sed -i 's/access_log .*;/access_log \/var\/log\/nginx\/access.log  main;/g' /etc/nginx/nginx.conf \
     && ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default \
     && ln -sf /dev/stdout /var/log/nginx/access.log \
-	&& ln -sf /dev/stderr /var/log/nginx/error.log
+    && ln -sf /dev/stderr /var/log/nginx/error.log
 
 EXPOSE 80
 
